@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject _player;
+    [SerializeField] private GameObject _circlePrefab;
 
-    // Update is called once per frame
-    void Update()
+    public void ShootButton()
     {
-        
+        GameObject circlePrefab = Instantiate(_circlePrefab);
+        circlePrefab.transform.position = _player.transform.position;
+        circlePrefab.transform.rotation = _player.transform.rotation;
     }
 }
