@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ScoreCounter : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class ScoreCounter : MonoBehaviour
 
     private void Start()
     {
+        Score = 0;
         _bestScore = PlayerPrefs.GetInt("bestScore", 0);
     }
 

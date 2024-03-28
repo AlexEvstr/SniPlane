@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3069975000213421576}
   - component: {fileID: 8746212075447869121}
   - component: {fileID: 425241558296795004}
-  - component: {fileID: -7209256637729838832}
   - component: {fileID: -8433920298595754008}
+  - component: {fileID: 6353477005786085204}
+  - component: {fileID: 6698203216286212455}
   m_Layer: 0
   m_Name: Missle
   m_TagString: Missle
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.5471698, g: 0.007742955, b: 0.007742955, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 2a94e30cd163941b68090212b7c4dde3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,8 +100,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9da774d689ec43eab72749b6eb554b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &-7209256637729838832
-CircleCollider2D:
+--- !u!114 &-8433920298595754008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823010799851338549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2ececd7a47944e0bd87052b9d7efd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 469193514966382382, guid: 8a9519cf14205430faff77257f4fd3e5, type: 3}
+--- !u!70 &6353477005786085204
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -128,13 +142,13 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.49999997
---- !u!114 &-8433920298595754008
+  m_Size: {x: 1.3699999, y: 2.3599997}
+  m_Direction: 0
+--- !u!114 &6698203216286212455
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +157,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4823010799851338549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc2ececd7a47944e0bd87052b9d7efd1, type: 3}
+  m_Script: {fileID: 11500000, guid: f50c6c0667a0d4aaf886611828ba1645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 469193514966382382, guid: 8a9519cf14205430faff77257f4fd3e5, type: 3}
+  _missles:
+  - {fileID: 21300000, guid: 2a94e30cd163941b68090212b7c4dde3, type: 3}
+  - {fileID: 21300000, guid: 6f20074d8ae8741908ae64703ffa67e3, type: 3}
+  - {fileID: 21300000, guid: ead2c2b7255e0499696a2bf1f87842e2, type: 3}
+  - {fileID: 21300000, guid: 43374275a7f95497ca9747a3c34555da, type: 3}
+  - {fileID: 21300000, guid: 3260f663e63cf4eac86bccc5429d4fdd, type: 3}
+  - {fileID: 21300000, guid: 8b47e2973bdeb42f9b51a4ad6d584a5f, type: 3}
