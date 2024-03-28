@@ -5,17 +5,21 @@ using UnityEngine;
 public class HeartsSystem : MonoBehaviour
 {
     [SerializeField] private GameObject[] hearts;
+    [SerializeField] private GameObject _lose;
 
     private int _heartIndex;
 
     public void DestroyHeart()
     {
         hearts[_heartIndex].SetActive(false);
-        _heartIndex++;
+        
 
         if (_heartIndex == 2)
         {
-            Debug.Log("Game over");
+            _lose.SetActive(true);
+            Time.timeScale = 0;
         }
+
+        _heartIndex++;
     }
 }
