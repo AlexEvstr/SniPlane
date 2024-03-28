@@ -10,6 +10,7 @@ public class HitDetector : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Target"))
         {
+            ScoreCounter.Score++;
             Destroy(collision.gameObject);
             GameObject newTarget = Instantiate(_target);
             _target.transform.position = new Vector2(Random.Range(-2, 2), Random.Range(1, 4));
